@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Belajar Reactjs</title>
+        <script  src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+        <script  src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+        <script  src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="depan"></div>
+        <div id="belakang"></div> <br />
+        <div id="matkul"></div>
+        <div id="semester"></div>
+        <script>
+       class Satu {
+           constructor(namadepan,namabelakang){
+           this.depan = namadepan;
+           this.belakang= namabelakang;
+       }
+    }
+    var nama = new Satu("Ricky", "Noviansyah");
+    document.getElementById("depan").innerHTML = "Nama Depan" + nama.depan + ".";
+    document.getElementById("belakang").innerHTML = "Nama Belakang" + nama.belakang + ".";
+
+    class Dua {
+           constructor(mapel,semester){
+           this.matkul= mapel;
+           this.semester2= semester;
+       }
+    }
+    var nama2 = new Dua("Web Programing with Reactjs", 2);
+    document.getElementById("matkul").innerHTML = "Nama Matkul" + nama2.matkul + ".";
+    document.getElementById("semester").innerHTML = "Semester" + nama2.semester2 + ".";
+
+
+
+
+
+
+    
+        </script>
+    </body>
+</html>
