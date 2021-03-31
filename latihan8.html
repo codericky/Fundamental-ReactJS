@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Belajar React</title>
+        <script  src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+        <script  src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+        <script  src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    </head>
+    <body>
+       <div id="nama"></div>
+       <div id="mapel"></div>
+       <div id="semester"></div>
+        <script type="text/babel">
+
+        // Nama
+    class Nama extends React.Component{
+    render() {
+        return <div>
+        <h2>Nama {this.props.brand.depan} 
+            {this.props.brand.tengah} 
+            {this.props.brand.belakang}
+        </h2>
+        </div>
+    }
+}
+    class Ricky extends React.Component{
+       render() {
+           const carinfo = {depan: "Ricky", tengah:"Rick", belakang:"Noviansyah"};
+        return(
+            <div>
+            <Nama brand={carinfo}
+            />
+            </div>
+        );
+    }
+}
+ReactDOM.render(<Ricky />, document.getElementById("nama"));
+
+// Mapel
+class Mapel1 extends React.Component{
+    render() {
+  return <div>
+     <Mapel2 name="React" time="2 hours" day="Weednesday." />
+         </div>
+    }
+}
+    function Mapel2 (props){
+        return(
+            <div>
+                <h2>
+      Sks {props.name}, Waktu {props.time} Pertemuan {props.day}
+      
+    </h2>
+            </div>
+        );
+    }
+
+ReactDOM.render(<Mapel1 />, document.getElementById("mapel"));
+
+
+// Semester
+class Semester extends React.Component{
+    render() {
+        return <div>
+         <h2>Semester : 
+        {this.props.brand.semester} Tahun
+        {this.props.brand.tahun}</h2>
+         </div>
+    }
+}
+    class Tahun extends React.Component{
+       render() {
+           const carinfo = {semester: 2, tahun:"2021"};
+        return(
+            <div>
+            <Semester brand={carinfo}
+            />
+            </div>
+        );
+    }
+}
+ReactDOM.render(<Tahun />, document.getElementById("semester"));
+        </script>
+    </body>
+</html>
