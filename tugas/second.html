@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Second Page</title>
+        <script  src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+        <script  src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+        <script  src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    </head>
+    <body>
+       <div id="output"></div>
+        <script type="text/babel"> 
+    class App extends React.Component {
+    render() {
+        return (
+        <div>
+            <Learn />
+            <a href="there.html">GO TO PAGE THREE</a>
+        </div>
+        );
+    }
+    }
+ class Learn extends React.Component {
+   render() {
+     const programming = 'Learn ReactJS ';
+     return <h1>{programming}</h1>;
+   }
+ }
+ReactDOM.render(<App />, document.getElementById("output"));
+        </script>
+    </body>
+</html>
